@@ -3,6 +3,6 @@ import {Button} from "flowbite-react"
 
 export default function Header() {
   return (
-    <Button>Header</Button>
+    <Button gradientduotone='purpleToBlue' outline>Headser</Button>
   )
 }
