@@ -1,12 +1,14 @@
 'use client';
 import Link from 'next/link';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon } from 'react-icons/fa';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export default function Header() {
   const path = usePathname();
+  const { theme, setTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -39,9 +41,12 @@ export default function Header() {
             <AiOutlineSearch />
           </button>
 
-          {/* Dark Mode */}
-          <button className="hidden sm:flex w-10 h-10 items-center justify-center border border-gray-300 rounded-full text-gray-700">
-            <FaMoon />
+          {/* Dark Mode Toggle */}
+          <button
+            className="hidden sm:flex w-10 h-10 items-center justify-center border border-gray-300 rounded-full text-gray-700"
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          >
+            {theme === 'light' ? <FaSun /> : <FaMoon />}
           </button>
 
           {/* Sign In */}
@@ -63,7 +68,41 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Collapsible Menu */}
+      {/* Desktop links (visible on lg+) */}
+      <ul className="hidden lg:flex gap-4 px-4">
+        <li>
+          <Link
+            href="/"
+            className={`px-3 py-2 rounded ${
+              path === '/' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+            }`}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/about"
+            className={`px-3 py-2 rounded ${
+              path === '/about' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+            }`}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/projects"
+            className={`px-3 py-2 rounded ${
+              path === '/projects' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+            }`}
+          >
+            Projects
+          </Link>
+        </li>
+      </ul>
+
+      {/* Collapsible Menu (mobile) */}
       {menuOpen && (
         <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 px-4 py-2">
           <ul className="flex flex-col gap-2">
