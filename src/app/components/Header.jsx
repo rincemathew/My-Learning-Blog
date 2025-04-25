@@ -1,10 +1,10 @@
-'use client';
-import Link from 'next/link';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon, FaSun } from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { useTheme } from 'next-themes';
+"use client";
+import Link from "next/link";
+import { AiOutlineSearch } from "react-icons/ai";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Header() {
   const path = usePathname();
@@ -15,7 +15,10 @@ export default function Header() {
     <header className="border-b-2">
       <nav className="flex items-center justify-between p-4 max-w-7xl mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-sm sm:text-xl font-semibold">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-sm sm:text-xl font-semibold"
+        >
           <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
             My Learning Blog
           </span>
@@ -44,9 +47,9 @@ export default function Header() {
           {/* Dark Mode Toggle */}
           <button
             className="hidden sm:flex w-10 h-10 items-center justify-center border border-gray-300 rounded-full text-gray-700"
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === 'light' ? <FaSun /> : <FaMoon />}
+            {theme === "light" ? <FaSun /> : <FaMoon />}
           </button>
 
           {/* Sign In */}
@@ -74,7 +77,9 @@ export default function Header() {
           <Link
             href="/"
             className={`px-3 py-2 rounded ${
-              path === '/' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+              path === "/"
+                ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                : ""
             }`}
           >
             Home
@@ -84,7 +89,9 @@ export default function Header() {
           <Link
             href="/about"
             className={`px-3 py-2 rounded ${
-              path === '/about' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+              path === "/about"
+                ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                : ""
             }`}
           >
             About
@@ -94,7 +101,9 @@ export default function Header() {
           <Link
             href="/projects"
             className={`px-3 py-2 rounded ${
-              path === '/projects' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+              path === "/projects"
+                ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                : ""
             }`}
           >
             Projects
@@ -110,7 +119,9 @@ export default function Header() {
               <Link
                 href="/"
                 className={`block px-4 py-2 rounded ${
-                  path === '/' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+                  path === "/"
+                    ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                    : ""
                 }`}
               >
                 Home
@@ -120,7 +131,9 @@ export default function Header() {
               <Link
                 href="/about"
                 className={`block px-4 py-2 rounded ${
-                  path === '/about' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+                  path === "/about"
+                    ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                    : ""
                 }`}
               >
                 About
@@ -130,7 +143,9 @@ export default function Header() {
               <Link
                 href="/projects"
                 className={`block px-4 py-2 rounded ${
-                  path === '/projects' ? 'bg-indigo-100 dark:bg-indigo-800 text-indigo-600' : ''
+                  path === "/projects"
+                    ? "bg-indigo-100 dark:bg-indigo-800 text-indigo-600"
+                    : ""
                 }`}
               >
                 Projects
