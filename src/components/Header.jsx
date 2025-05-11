@@ -5,6 +5,8 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { dark, light } from "@clerk/themes";
 
 export default function Header() {
   const path = usePathname();
@@ -53,11 +55,14 @@ export default function Header() {
           </button>
 
           {/* Sign In */}
-          <Link href="/sign-in">
+          <SignedIn>
+            <UserButton></UserButton>
+          </SignedIn>
+          <SignedOut>
             <button className="px-4 py-2 rounded-lg border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all">
-              Sign In
+              <SignInButton/>
             </button>
-          </Link>
+            </SignedOut>
 
           {/* Toggle Menu */}
           <button
