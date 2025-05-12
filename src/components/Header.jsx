@@ -56,7 +56,13 @@ export default function Header() {
 
           {/* Sign In */}
           <SignedIn>
-            <UserButton></UserButton>
+            <UserButton
+            appearance={
+              {
+                baseTheme:theme === 'light' ? light : dark,
+              }
+            }
+            />
           </SignedIn>
           <SignedOut>
             <button className="px-4 py-2 rounded-lg border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all">
