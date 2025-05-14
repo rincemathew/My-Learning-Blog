@@ -4,9 +4,10 @@
 https://my-learning-blog-alpha.vercel.app/
 
 
-flowbite
+<!-- flowbite -->
 19:19 tailwind config js
 29:41 dark theme
 43:00 clark configuration
+1:27:00 mongodb
 
-1:13:12
+1:36:00
