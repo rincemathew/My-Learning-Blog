@@ -10,4 +10,4 @@ https://my-learning-blog-alpha.vercel.app/
 43:00 clark configuration
 1:27:00 mongodb
 
-1:36:00
+1:40:25
