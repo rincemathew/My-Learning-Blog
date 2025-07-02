@@ -13,13 +13,13 @@ export async function POST(req) {
     );
     console.log("Webhook payload:", evt.data);
 
-    if (evt.type === "user.created") {
-      console.log("userId:", evt.data.id);
+    if (evt.type === "user.created" || evt.type === "user.updated") {
+      const {id, first_name, last_name, image_url, email_addresses, username} = evt?.data;
     }
 
-    if (evt.type === "user.updated") {
-      console.log("userId:", evt.data.id);
-    }
+    // if (evt.type === "user.updated") {
+    //   console.log("userId:", evt.data.id);
+    // }
 
     return new Response("Webhook received", { status: 200 });
   } catch (err) {
