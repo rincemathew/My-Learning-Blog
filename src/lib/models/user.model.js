@@ -1,3 +1,4 @@
+//User model, schema for your User collection, defining what fields each user document will contain.
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
@@ -33,8 +34,9 @@ const userSchema = new mongoose.Schema(
             type:Boolean,
             default:false
         }
-    },{timestamps:true}
+    },{timestamps:true}//Automatically adds createdAt and updatedAt fields to each document
 )
-
+//reuses an existing model if already defined (avoids model overwrite errors during hot reload).
+// or creates the model if it doesn’t exist.
 const User = mongoose.models.User || mongoose.model('User', userSchema);
 export default User;

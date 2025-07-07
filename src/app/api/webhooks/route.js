@@ -1,3 +1,4 @@
+import { createOrUpdateUser } from "@/lib/actions/user";
 import { verifyWebhook } from "@clerk/nextjs/webhooks";
 
 export async function POST(req) {
@@ -20,6 +21,13 @@ export async function POST(req) {
     // if (evt.type === "user.updated") {
     //   console.log("userId:", evt.data.id);
     // }
+    try {
+      const user = await createOrUpdateUser(
+        id,first_name,last_name,image_url,email_addresses,username
+      )
+    } catch (error) {
+      
+    }
 
     return new Response("Webhook received", { status: 200 });
   } catch (err) {

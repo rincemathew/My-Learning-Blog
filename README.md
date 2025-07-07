@@ -8,6 +8,9 @@ https://my-learning-blog-alpha.vercel.app/
 19:19 tailwind config js
 29:41 dark theme
 43:00 clark configuration
-1:27:00 mongodb
+1:27:00 mongodb  //documentation proper
+1:46:00 connect to clark webhooks
 
-1:49:25
+
+
+1:46:25
