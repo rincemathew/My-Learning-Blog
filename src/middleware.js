@@ -1,3 +1,4 @@
+//for clark authentication
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
 export default clerkMiddleware();
