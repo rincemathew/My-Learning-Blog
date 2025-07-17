@@ -1,5 +1,7 @@
+// import { createOrUpdateUser, deleteUser } from "@/lib/actions/user";
 import { createOrUpdateUser, deleteUser } from "../../../lib/actions/user.js";
-import { clerkClient } from "@clerk/nextjs/dist/types/server";
+import { clerkClient } from "@clerk/clerk-sdk-node";
+// import { clerkClient } from "@clerk/nextjs/dist/types/server";
 import { verifyWebhook } from "@clerk/nextjs/webhooks";
 
 export async function POST(req) {
