@@ -17,6 +17,7 @@ https://my-learning-blog-alpha.vercel.app/
 <!-- 2:55:00 article view page -->
 <!-- 3:04:00 recent articles -->
 <!-- 3:10:00 home page -->
+page.js for home page
 
 
 2:55:00
