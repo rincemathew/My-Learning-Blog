@@ -14,6 +14,9 @@ https://my-learning-blog-alpha.vercel.app/
 <!-- 2:09:00 create post ui protect as admin -->
 <!-- 2:29:00 firbase as storage and upload image-->
 <!-- 2:43:00 post functionalities -->
+<!-- 2:55:00 article view page -->
+<!-- 3:04:00 recent articles -->
+<!-- 3:10:00 home page -->
 
 
-2:43:00
+2:55:00
