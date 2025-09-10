@@ -22,7 +22,7 @@ export default function Header() {
           className="flex items-center gap-2 text-sm sm:text-xl font-semibold"
         >
           <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-            My Learning Blog
+            My Learning
           </span>
           <span className="dark:text-white">Blog</span>
         </Link>
@@ -48,7 +48,7 @@ export default function Header() {
 
           {/* Dark Mode Toggle */}
           <button
-            className="hidden sm:flex w-10 h-10 items-center justify-center border border-gray-300 rounded-full text-gray-700"
+            className="hidden sm:flex w-10 h-10 items-center justify-center border border-gray-300 rounded-full text-gray-700 hover:cursor-pointer"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             {theme === "light" ? <FaSun /> : <FaMoon />}
@@ -83,7 +83,7 @@ export default function Header() {
       </nav>
 
       {/* Desktop links (visible on lg+) */}
-      <ul className="hidden lg:flex gap-4 px-4">
+      <ul className="hidden lg:flex items-center justify-start p-4 max-w-7xl mx-auto">
         <li>
           <Link
             href="/"
